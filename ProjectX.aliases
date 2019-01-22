@@ -1,6 +1,0 @@
-[My Computer]
-My Computer = "127.0.0.1"
-
-[RT myRIO Target]
-RT myRIO Target = "172.22.11.2"
-

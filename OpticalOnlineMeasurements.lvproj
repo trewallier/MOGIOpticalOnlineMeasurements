@@ -12,8 +12,8 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="newConcept" Type="Folder"/>
 		<Item Name="Message.ctl" Type="VI" URL="../Message.ctl"/>
+		<Item Name="PhotodiodeMeasClient.vi" Type="VI" URL="../PhotodiodeMeasClient.vi"/>
 		<Item Name="States.ctl" Type="VI" URL="../States.ctl"/>
-		<Item Name="y.vi" Type="VI" URL="../y.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
@@ -79,7 +79,7 @@
 				<Property Name="Source[0].itemID" Type="Str">{5F16197F-6EB9-41A3-9AD0-F42115B8689A}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/y.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/PhotodiodeMeasClient.vi</Property>
 				<Property Name="Source[1].newName" Type="Str">Fotodióda mérés.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
@@ -173,7 +173,7 @@ AddOutputFilter chunkFilter
 		<Property Name="target.WebServer.ViAccess" Type="Str">+*</Property>
 		<Property Name="target.webservices.SecurityAPIKey" Type="Str">PqVr/ifkAQh+lVrdPIykXlFvg12GhhQFR8H9cUhphgg=:pTe9HRlQuMfJxAG6QCGq7UvoUpJzAzWGKy5SbZ+roSU=</Property>
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
-		<Item Name="KUNIlib" Type="Folder">
+		<Item Name="AdafruitSensor" Type="Folder">
 			<Item Name="Analog_enable.vi" Type="VI" URL="../KUNIlib/Analog_enable.vi"/>
 			<Item Name="Connection_check.vi" Type="VI" URL="../KUNIlib/Connection_check.vi"/>
 			<Item Name="Init.vi" Type="VI" URL="../KUNIlib/Init.vi"/>
@@ -198,7 +198,6 @@ AddOutputFilter chunkFilter
 			<Item Name="RT_Refresh_Connections.vi" Type="VI" URL="../newConcept/RT_Refresh_Connections.vi"/>
 			<Item Name="RT_TCP_Listener_Enque.vi" Type="VI" URL="../newConcept/RT_TCP_Listener_Enque.vi"/>
 		</Item>
-		<Item Name="az_ellenseg_megtevesztese.vi" Type="VI" URL="../az_ellenseg_megtevesztese.vi"/>
 		<Item Name="Chassis" Type="myRIO Chassis">
 			<Property Name="crio.ProgrammingMode" Type="Str">fpga</Property>
 			<Property Name="crio.ResourceID" Type="Str">RIO0</Property>
@@ -211,6 +210,7 @@ AddOutputFilter chunkFilter
 		<Item Name="LinuxLigixúc.vi" Type="VI" URL="../KUNIlib/LinuxLigixúc.vi"/>
 		<Item Name="pwm.vi" Type="VI" URL="../pwm.vi"/>
 		<Item Name="RIOStates.ctl" Type="VI" URL="../RIOStates.ctl"/>
+		<Item Name="RT_Meas_Old.vi" Type="VI" URL="../RT_Meas_Old.vi"/>
 		<Item Name="x.vi" Type="VI" URL="../x.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -367,7 +367,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Source[0].itemID" Type="Str">{EFE35628-D244-4985-97D0-40CD4D74CD38}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/RT myRIO Target/az_ellenseg_megtevesztese.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/RT myRIO Target/RT_Meas_Old.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="SourceCount" Type="Int">2</Property>
