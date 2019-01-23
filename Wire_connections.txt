@@ -1,0 +1,13 @@
+Adafruit sensor	myRIO MXP connector
+VIN	1	Red
+GND	8	Black
+3V3	(disconnected)	N/A
+SCL	32	Green
+SDA	34	Yellow
+INT	26	Orange
+LED	12	Blue
+
+R_LED	27	Red
+G_LED	29	Green
+B_LED	31	Blue
+GND_LED	30	Black
