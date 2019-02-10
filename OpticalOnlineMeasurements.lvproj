@@ -11,6 +11,7 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="newConcept" Type="Folder"/>
+		<Item Name="Convert_RGB_to_Irradience.vi" Type="VI" URL="../Convert_RGB_to_Irradience.vi"/>
 		<Item Name="Message.ctl" Type="VI" URL="../Message.ctl"/>
 		<Item Name="PhotodiodeMeasClient.vi" Type="VI" URL="../PhotodiodeMeasClient.vi"/>
 		<Item Name="States.ctl" Type="VI" URL="../States.ctl"/>
