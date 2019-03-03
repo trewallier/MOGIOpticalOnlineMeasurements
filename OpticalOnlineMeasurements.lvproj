@@ -1,5 +1,8 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="18008000">
+	<Property Name="CCSymbols" Type="Str">Sensor,Lux;</Property>
+	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
+	<Property Name="NI.Project.Description" Type="Str"></Property>
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -215,7 +218,11 @@
 				<Property Name="DistPart[0].SoftDep[9].upgradeCode" Type="Str">{D42E7BAE-6589-4570-B6A3-3E28889392E7}</Property>
 				<Property Name="DistPart[0].SoftDepCount" Type="Int">13</Property>
 				<Property Name="DistPart[0].upgradeCode" Type="Str">{3B195EBF-4A09-46E6-8EAD-931568C1344C}</Property>
-				<Property Name="DistPartCount" Type="Int">1</Property>
+				<Property Name="DistPart[1].flavorID" Type="Str">_full_</Property>
+				<Property Name="DistPart[1].productID" Type="Str">{7700A069-B3B0-4F7F-9625-8594AFEE9F65}</Property>
+				<Property Name="DistPart[1].productName" Type="Str">NI CompactRIO Runtime 18.0</Property>
+				<Property Name="DistPart[1].upgradeCode" Type="Str">{2F61F2B4-6D5A-49AD-BED8-60A4CA874A08}</Property>
+				<Property Name="DistPartCount" Type="Int">2</Property>
 				<Property Name="INST_author" Type="Str">Robert Bosch Kft.</Property>
 				<Property Name="INST_autoIncrement" Type="Bool">true</Property>
 				<Property Name="INST_buildLocation" Type="Path">../builds/OpticalOnlineMeasurements/LED Client Installer</Property>
@@ -223,11 +230,10 @@
 				<Property Name="INST_buildSpecName" Type="Str">LED Client Installer</Property>
 				<Property Name="INST_defaultDir" Type="Str">{6B1B892B-0035-4BCE-9D3A-4A6D255354BE}</Property>
 				<Property Name="INST_productName" Type="Str">OpticalOnlineMeasurements</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.1</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.2</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">18008011</Property>
 				<Property Name="MSI_arpCompany" Type="Str">BME</Property>
-				<Property Name="MSI_autoselectDrivers" Type="Bool">true</Property>
 				<Property Name="MSI_distID" Type="Str">{567DF4C5-AA8F-4DF2-ACF3-4F3EB19DC59D}</Property>
 				<Property Name="MSI_hideNonRuntimes" Type="Bool">true</Property>
 				<Property Name="MSI_osCheck" Type="Int">0</Property>
@@ -236,6 +242,22 @@
 				<Property Name="RegDest[0].dirTag" Type="Str">{DDFAFC8B-E728-4AC8-96DE-B920EBB97A86}</Property>
 				<Property Name="RegDest[0].parentTag" Type="Str">2</Property>
 				<Property Name="RegDestCount" Type="Int">1</Property>
+				<Property Name="Source[0].dest" Type="Str">{6B1B892B-0035-4BCE-9D3A-4A6D255354BE}</Property>
+				<Property Name="Source[0].File[0].dest" Type="Str">{6B1B892B-0035-4BCE-9D3A-4A6D255354BE}</Property>
+				<Property Name="Source[0].File[0].name" Type="Str">LED Client.exe</Property>
+				<Property Name="Source[0].File[0].Shortcut[0].destIndex" Type="Int">0</Property>
+				<Property Name="Source[0].File[0].Shortcut[0].name" Type="Str">LED Client</Property>
+				<Property Name="Source[0].File[0].Shortcut[0].subDir" Type="Str">OpticalOnlineMeasurements</Property>
+				<Property Name="Source[0].File[0].Shortcut[1].destIndex" Type="Int">1</Property>
+				<Property Name="Source[0].File[0].Shortcut[1].name" Type="Str">LED Client</Property>
+				<Property Name="Source[0].File[0].Shortcut[1].subDir" Type="Str"></Property>
+				<Property Name="Source[0].File[0].ShortcutCount" Type="Int">2</Property>
+				<Property Name="Source[0].File[0].tag" Type="Str">{480A7515-B59D-43C3-8F78-4836935C15E7}</Property>
+				<Property Name="Source[0].FileCount" Type="Int">1</Property>
+				<Property Name="Source[0].name" Type="Str">LED Client</Property>
+				<Property Name="Source[0].tag" Type="Ref">/My Computer/Build Specifications/LED Client</Property>
+				<Property Name="Source[0].type" Type="Str">EXE</Property>
+				<Property Name="SourceCount" Type="Int">1</Property>
 			</Item>
 		</Item>
 	</Item>
@@ -351,11 +373,12 @@ AddOutputFilter chunkFilter
 				<Property Name="crio.ModuleContainerType" Type="Str">crio.RSIModuleContainer</Property>
 			</Item>
 		</Item>
+		<Item Name="I2C_tester.vi" Type="VI" URL="../I2C_tester.vi"/>
+		<Item Name="I2C_tester_2.vi" Type="VI" URL="../I2C_tester_2.vi"/>
 		<Item Name="LinuxLigixúc.vi" Type="VI" URL="../KUNIlib/LinuxLigixúc.vi"/>
 		<Item Name="pwm.vi" Type="VI" URL="../pwm.vi"/>
 		<Item Name="RIOStates.ctl" Type="VI" URL="../RIOStates.ctl"/>
 		<Item Name="RT_Meas_Old.vi" Type="VI" URL="../RT_Meas_Old.vi"/>
-		<Item Name="x.vi" Type="VI" URL="../x.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Calculate Clock Settings.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/vis/Calculate Clock Settings.vi"/>
